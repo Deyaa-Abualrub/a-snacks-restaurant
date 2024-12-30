@@ -11,6 +11,7 @@ while (true) {
     }
 }
 
+
 if (Gender === "male") {
     alert(`Welcome, Mr. ${userName}!`);
 } else if (Gender === "female") {
@@ -19,7 +20,11 @@ if (Gender === "male") {
 let orderChoice = prompt("Would you like to order shawarma, zinger, or burger");
 alert(`Your ${orderChoice} is being prepared.`);
 
-
+let ask = prompt("Do you want your name to appear in the order?");
+if(ask === 'yes' ){
+    alert( `${userName} Your order is being prepared!`);
+}
+console.log(`${userName} This Your Order ${orderChoice} `);
 
 // //Q2
 let num = prompt("Enter your number from 0 to 10:");
@@ -82,14 +87,7 @@ alert(`Thank you! You entered a valid number: ${number}`);
 
 let number2 = parseInt(prompt("Please enter an integer:"));
 
-let sum = 0;
-
-
-for (let i = 0; i <= number2; i++) {
-  sum += i;
-}
-
-alert(`The sum of integers from 0 to ${number2} is: ${sum}`);
+alert(`The sum of integers from 0 to ${number2} is: ${(number2*(number2+1))/2}`);
 
 
 
