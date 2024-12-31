@@ -1,35 +1,5 @@
 // //Q1
 
-// let info = [];
-// let userName = prompt("Enter your Name please :");
-// info.push(userName);
-// let Gender;
-
-// while (true) {
-//   Gender = prompt("Enter Your Gender please:");
-//   if (Gender === "male" || Gender === "female") {
-//     info.push(Gender);
-//     break;
-//   } else {
-//     alert("Invalid input. Please enter 'male' or 'female'.");
-//   }
-// }
-
-// if (Gender === "male") {
-//   alert(`Welcome, Mr. ${userName}!`);
-// } else if (Gender === "female") {
-//   alert(`Welcome, Ms. ${userName}!`);
-// }
-// let orderChoice = prompt("Would you like to order shawarma, zinger, or burger");
-// alert(`Your ${orderChoice} is being prepared.`);
-
-
-
-// let ask = prompt("Do you want your name to appear in the order?");
-// if (ask === "yes") {
-//   alert(`${userName} This Your Order ${orderChoice}`);
-// }
-
 let info = [];
 
 let name = prompt("Enter your name");
