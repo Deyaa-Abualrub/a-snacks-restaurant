@@ -1,93 +1,140 @@
 // //Q1
-let userName = prompt("Enter your Name please :");
-let Gender;
+
+// let info = [];
+// let userName = prompt("Enter your Name please :");
+// info.push(userName);
+// let Gender;
+
+// while (true) {
+//   Gender = prompt("Enter Your Gender please:");
+//   if (Gender === "male" || Gender === "female") {
+//     info.push(Gender);
+//     break;
+//   } else {
+//     alert("Invalid input. Please enter 'male' or 'female'.");
+//   }
+// }
+
+// if (Gender === "male") {
+//   alert(`Welcome, Mr. ${userName}!`);
+// } else if (Gender === "female") {
+//   alert(`Welcome, Ms. ${userName}!`);
+// }
+// let orderChoice = prompt("Would you like to order shawarma, zinger, or burger");
+// alert(`Your ${orderChoice} is being prepared.`);
+
+
+
+// let ask = prompt("Do you want your name to appear in the order?");
+// if (ask === "yes") {
+//   alert(`${userName} This Your Order ${orderChoice}`);
+// }
+
+let info = [];
+
+let name = prompt("Enter your name");
+
+info.push(name);
+
+let gender;
 
 while (true) {
-    Gender = prompt("Enter Your Gender please:");
-    if (Gender === "male" || Gender === "female") {
-        break;
-    } else {
-        alert("Invalid input. Please enter 'male' or 'female'.");
-    }
+  gender = prompt("Enter gender");
+  if (gender.toLowerCase() === "male" || gender.toLowerCase() === "female") {
+    info.push(gender);
+    break;
+  } else {
+    alert("try again!");
+  }
 }
 
-
-if (Gender === "male") {
-    alert(`Welcome, Mr. ${userName}!`);
-} else if (Gender === "female") {
-    alert(`Welcome, Ms. ${userName}!`);
+if (gender.toLowerCase() == "male") {
+  alert(`hello mr.${name}`);
+} else if (gender.toLowerCase() == "female") {
+  alert(`hello ms.${name}`);
+} else {
+  alert("hello there !");
 }
-let orderChoice = prompt("Would you like to order shawarma, zinger, or burger");
-alert(`Your ${orderChoice} is being prepared.`);
 
-let ask = prompt("Do you want your name to appear in the order?");
-if(ask === 'yes' ){
-    alert( `${userName} Your order is being prepared!`);
+let order = prompt("do you want shawarma, zinger, burger?");
+
+if (order.toLowerCase() == "shawarma") {
+  alert("preparing shawarma ...");
+  info.push(order);
+} else if (order.toLowerCase() == "zinger") {
+  alert("preparing zinger ...");
+  info.push(order);
+} else if (order.toLowerCase() == "burger") {
+  alert("preparing burger ...");
+  info.push(order);
+} else {
+  alert("incorrect input, try again!");
 }
-console.log(`${userName} This Your Order ${orderChoice} `);
+console.log(info);
+
+
 
 // //Q2
-let num = prompt("Enter your number from 0 to 10:");
-switch (Number(num)) {
-    case 1:
-        console.log("ONE");
-        break;
-    case 2:
-        console.log("TWO");
-        break;
-    case 3:
-        console.log("three");
-        break;
-    case 4:
-        console.log("FOUR");
-        break;
-    case 5:
-        console.log("FIVE");
-        break;
-    case 6:
-        console.log("SIX");
-        break;
-    case 7:
-        console.log("SEVEN");
-        break;
-    case 8:
-        console.log("EIGHT");
-        break;
-    case 9:
-        console.log("NINE");
-        break;
-    default:
-        console.log("PLEASE TRY AGAIN");
-}
-
+// let num = prompt("Enter your number from 0 to 10:");
+// switch (Number(num)) {
+//   case 1:
+//     console.log("ONE");
+//     break;
+//   case 2:
+//     console.log("TWO");
+//     break;
+//   case 3:
+//     console.log("three");
+//     break;
+//   case 4:
+//     console.log("FOUR");
+//     break;
+//   case 5:
+//     console.log("FIVE");
+//     break;
+//   case 6:
+//     console.log("SIX");
+//     break;
+//   case 7:
+//     console.log("SEVEN");
+//     break;
+//   case 8:
+//     console.log("EIGHT");
+//     break;
+//   case 9:
+//     console.log("NINE");
+//     break;
+//   default:
+//     console.log("PLEASE TRY AGAIN");
+// }
 
 // task two
 //Q1
-for (let i = 0; i <= 5; i++) {
-    alert(i);
-}
+// for (let i = 0; i <= 5; i++) {
+//   alert(i);
+// }
 
-//Q2
-let number;
+// //Q2
+// let number;
 
-while (true) {
-    number = prompt("Please enter a number between 0 and 100:");
+// while (true) {
+//   number = prompt("Please enter a number between 0 and 100:");
 
-    if (number >= 0 && number <= 100) {
-        break;
-    } else {
-        alert("Invalid input. Please enter a number between 0 and 100.");
-    }
-}
+//   if (number >= 0 && number <= 100) {
+//     break;
+//   } else {
+//     alert("Invalid input. Please enter a number between 0 and 100.");
+//   }
+// }
 
+// alert(`Thank you! You entered a valid number: ${number}`);
 
-alert(`Thank you! You entered a valid number: ${number}`);
+// //Q3
 
-//Q3
+// let number2 = parseInt(prompt("Please enter an integer:"));
 
-let number2 = parseInt(prompt("Please enter an integer:"));
-
-alert(`The sum of integers from 0 to ${number2} is: ${(number2*(number2+1))/2}`);
-
-
-
+// alert(
+//   `The sum of integers from 0 to ${number2} is: ${
+//     (number2 * (number2 + 1)) / 2
+//   }`
+// );
