@@ -108,3 +108,33 @@ console.log(info);
 //     (number2 * (number2 + 1)) / 2
 //   }`
 // );
+
+const div = document.createElement('div');
+
+
+const paragraph = document.createElement('p');
+paragraph.textContent = name;
+div.appendChild(paragraph); 
+
+
+const ol = document.createElement('ol');
+
+
+const li1 = document.createElement('li');
+li1.textContent = gender;
+
+const li2 = document.createElement('li');
+li2.textContent = 'Age: 27';
+
+const li3 = document.createElement('li');
+li3.textContent = order;
+
+
+ol.appendChild(li1);
+ol.appendChild(li2);
+ol.appendChild(li3);
+
+
+div.appendChild(ol);
+
+document.body.appendChild(div);
