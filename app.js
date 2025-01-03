@@ -1,48 +1,46 @@
 // //Q1
 
-let info = [];
+// let info = [];
 
-let name = prompt("Enter your name");
+// let name = prompt("Enter your name");
 
-info.push(name);
+// info.push(name);
 
-let gender;
+// let gender;
 
-while (true) {
-  gender = prompt("Enter gender");
-  if (gender.toLowerCase() === "male" || gender.toLowerCase() === "female") {
-    info.push(gender);
-    break;
-  } else {
-    alert("try again!");
-  }
-}
+// while (true) {
+//   gender = prompt("Enter gender");
+//   if (gender.toLowerCase() === "male" || gender.toLowerCase() === "female") {
+//     info.push(gender);
+//     break;
+//   } else {
+//     alert("try again!");
+//   }
+// }
 
-if (gender.toLowerCase() == "male") {
-  alert(`hello mr.${name}`);
-} else if (gender.toLowerCase() == "female") {
-  alert(`hello ms.${name}`);
-} else {
-  alert("hello there !");
-}
+// if (gender.toLowerCase() == "male") {
+//   alert(`hello mr.${name}`);
+// } else if (gender.toLowerCase() == "female") {
+//   alert(`hello ms.${name}`);
+// } else {
+//   alert("hello there !");
+// }
 
-let order = prompt("do you want shawarma, zinger, burger?");
+// let order = prompt("do you want shawarma, zinger, burger?");
 
-if (order.toLowerCase() == "shawarma") {
-  alert("preparing shawarma ...");
-  info.push(order);
-} else if (order.toLowerCase() == "zinger") {
-  alert("preparing zinger ...");
-  info.push(order);
-} else if (order.toLowerCase() == "burger") {
-  alert("preparing burger ...");
-  info.push(order);
-} else {
-  alert("incorrect input, try again!");
-}
-console.log(info);
-
-
+// if (order.toLowerCase() == "shawarma") {
+//   alert("preparing shawarma ...");
+//   info.push(order);
+// } else if (order.toLowerCase() == "zinger") {
+//   alert("preparing zinger ...");
+//   info.push(order);
+// } else if (order.toLowerCase() == "burger") {
+//   alert("preparing burger ...");
+//   info.push(order);
+// } else {
+//   alert("incorrect input, try again!");
+// }
+// console.log(info);
 
 // //Q2
 // let num = prompt("Enter your number from 0 to 10:");
@@ -109,32 +107,48 @@ console.log(info);
 //   }`
 // );
 
-const div = document.createElement('div');
+// DOM Branch
 
+// let div = document.createElement("div");
 
-const paragraph = document.createElement('p');
-paragraph.textContent = name;
-div.appendChild(paragraph); 
+// let paragraph = document.createElement("p");
+// // paragraph.textContent = name;
+// div.appendChild(paragraph);
 
+// let ol = document.createElement("ol");
 
-const ol = document.createElement('ol');
+// let li1 = document.createElement("li");
+// li1.textContent = gender;
 
+// let li2 = document.createElement("li");
+// li2.textContent = "Age: 27";
 
-const li1 = document.createElement('li');
-li1.textContent = gender;
+// let li3 = document.createElement("li");
+// li3.textContent = order;
 
-const li2 = document.createElement('li');
-li2.textContent = 'Age: 27';
+// ol.appendChild(li1);
+// ol.appendChild(li2);
+// ol.appendChild(li3);
 
-const li3 = document.createElement('li');
-li3.textContent = order;
+// div.appendChild(ol);
 
+// document.body.appendChild(div);
 
-ol.appendChild(li1);
-ol.appendChild(li2);
-ol.appendChild(li3);
+// eventTask Bransh
 
+let form1 = document.getElementById("form1");
+let details = document.getElementById("details");
 
-div.appendChild(ol);
+form1.addEventListener("submit", function (events) {
+  events.preventDefault();
+  let username = document.getElementById("username").value;
+  let age = document.getElementById("age").value;
+  let gender = document.getElementById("gender").value;
+  let orderChoice = document.querySelector('input[name="orderChoice"]:checked').value;
 
-document.body.appendChild(div);
+  details.innerHTML = `
+    <b>Username:</b> ${username} <br>
+    <b>Age:</b> ${age} <br>
+    <b>Gender:</b> ${gender} <br>
+     <b>Order Choice:</b> ${orderChoice}`;
+});
